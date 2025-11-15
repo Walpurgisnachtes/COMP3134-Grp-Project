@@ -46,7 +46,7 @@ set SALES=data\sales_27.csv
 set CUSTOMERS=data\customers_27.csv
 set PRODUCTS=data\products_27.csv
 set OUTDIR=output
-set KMIN=4
+set KMIN=3
 set KMAX=8
 set PRICEBINS=4
 set WINSOR=99.5
@@ -56,6 +56,6 @@ REM 傳遞可變參數（允許使用者在命令尾端追加，例如 --no-umap
 set EXTRA=%*
 
 REM 執行主程式
-python src\cluster_customers.py --sales %SALES% --customers %CUSTOMERS% --products %PRODUCTS% --outdir %OUTDIR% --kmin %KMIN% --kmax %KMAX% --price-bins %PRICEBINS% --winsor %WINSOR% --seed %SEED% %EXTRA%
+python src\cluster_customers.py --sales %SALES% --customers %CUSTOMERS% --products %PRODUCTS% --outdir %OUTDIR% --kmin %KMIN% --kmax %KMAX% --run-hdbscan --use-minibatch --log-monetary --log-avg-ticket --pca-var 0.9 --min-frequency 2 --drop-bottom-monetary-quantile 0.1 --seed %SEED% %EXTRA%
 
 endlocal
