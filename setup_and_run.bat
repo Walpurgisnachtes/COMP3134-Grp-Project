@@ -29,7 +29,7 @@ if not exist .venv (
   echo "Creating virtual environment (.venv) ..."
   python -m venv .venv
   if errorlevel 1 (
-    echo [ERROR] Failed to create venv. Ensure Python is installed and on PATH.
+    echo [ERROR] "Failed to create venv. Ensure Python is installed and on PATH."
     exit /b 1
   )
 )

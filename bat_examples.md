@@ -1,4 +1,4 @@
-- UMAP 10 維 + KMeans（B 版推薦起點）
+- UMAP 10 維 + KMeans
 
 `./setup_and_run.bat --embed-for-clustering umap --umap-dim 10 --umap-neighbors 50 --umap-min-dist 0.1 --umap-metric cosine --kmin 3 --kmax 8 --use-minibatch --log-monetary --log-avg-ticket --min-frequency 2 --drop-bottom-monetary-quantile 0.1`
 
@@ -14,6 +14,6 @@
 
 `./setup_and_run.bat --embed-for-clustering umap --umap-dim 10 --clusterer hdbscan --hdbscan-min-cluster-size 40 --hdbscan-min-samples 10 --allow-noise-cluster --log-monetary`
 
-- 目標導向加權 [正在使用的版本]
+- 目標導向加權 [正在使用中]
 
 `./setup_and_run.bat --embed-for-clustering umap --clusterer kmeans --kmin 3 --kmax 8 --target-recent monetary_ratio --target-weight 0.3 --target-topk 6 --log-monetary`

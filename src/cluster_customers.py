@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import argparse
 import json
 import math
@@ -24,7 +21,7 @@ from sklearn.mixture import GaussianMixture
 from sklearn.metrics import silhouette_score, adjusted_rand_score, normalized_mutual_info_score
 from sklearn.preprocessing import StandardScaler, RobustScaler
 
-# 選用：若環境無 umap/hdbscan，可用 --no-umap 與不加 --clusterer hdbscan 閃避
+# 選用：若環境無 umap/hdbscan，可用 --no-umap 與不加 --clusterer hdbscan
 try:
     import umap  # type: ignore
     UMAP_AVAILABLE = True
